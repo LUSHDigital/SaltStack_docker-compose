@@ -1,0 +1,11 @@
+version: '3'
+services:
+  salt:
+    build: ./docker/centos-master
+    ports:
+     - "4505:4505"
+     - "4506:4506"
+  tom:
+    build: ./docker/centos-minion
+  jerry:
+    build: ./docker/ubuntu-minion
